@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>SSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .container {
+    padding: 80px 120px;
+  }
+  .div{
+				width: 94%;
+				height: auto;  
+				padding: 30px;
+				border: 6px solid  lightblue;
+				margin: 12px 0px 12px 0px;
+				}
+                form {
+            margin: 0px 0px 0px 380px;
+        }
+        #h1{
+            margin-left:500px;
+            margin-top:12px;
+            color:rgb(0, 4, 255);
+        }
+        #p {
+					margin-left:100px;
+					font-size:20px;
+				}
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: red;
+  
+  }
+  .container-fluid{
+      background-color:red;
+  }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+  
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="indexa.html">ADMIN</a></li>
+                <li><a href="homea.html">HOME</a></li>
+                <li><a href="stock.html">STOCK</a></li>
+              <li><a href="addstudent.html">ADD STUDENT</a></li>
+                <li><a href="transaction.html">TRANSACTION</a></li>
+                <li><a href="resetpassworda.html">RESET PASSWORD</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="div">
+        <div class="form">
+        <div >
+        <h1 id="h1">Add New Record</h1>
+        <form name="form" method="post" action=""> 
+            <p id="p" style="color:#FF0000;"><?php echo $status; ?></p>
+<p><label><?php echo @$err;?></label></p>
+        <label>Student Name :</label>  
+        <input type="hidden"  name="new" value="1" />
+        <p><input type="text" name="name" autocomplete="off" placeholder="Enter Name" required ></p>
+        <label>Address :</label> 
+        <p><input type="text" autocomplete="off" name="address" placeholder="Enter Address" required ></p>
+        <label>City :</label> 
+        <p><input type="text" autocomplete="off" name="city" placeholder="Enter city" required ></p>
+        <label>Pincode :</label> 
+        <p><input type="number" autocomplete="off" name="pincode" placeholder="Enter pincode" required ></p>
+        <label>Mobile No :</label> 
+        <p><input type="number" autocomplete="off" name="mobileno" pattern="^\d{10}$" placeholder="Enter mobileno" required ></p>
+        <label >Gender :</label>
+         <select name="gender"  placeholder="Gender" required>
+             <option value="">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+        </select>
+        <label>Department :</label>  
+         <select name="dep_type"  placeholder="Department Type" required>
+                <option value="">Department Type</option>
+                <option value="Computer science">CSE</option>
+                <option value="Information Technology">IT</option>
+               <option value="Electrical And Electronics Engineering">EEE</option>
+               <option value="Elecdtronic Communication Engineering">ECE</option>
+               <option value="Civil Engineering">CE</option>
+               <option value="Mechanical Engineering">ME</option>
+        </select>
+         <label>Year:</label>
+        <select name="Year"  placeholder="Year" required>
+                <option value="">Year</option>
+                 <option value="First">1</option>
+                <option value="Second">2</option>
+                <option value="Third">3</option>
+                <option value="Fourth">4</option>
+        </select><br>
+        <label>Balance :</label>
+        <p><input type="number"  name="Balance" > </p> 
+        <label>Email :</label>
+        <p><input type="email"   name="email"   required></p>
+        <label>Reg no :</label>
+        <p><input type="number"  name="reg no"  required></p>
+        <input name="submit" type="submit" value="Submit" />
+        </form>
+        </div>
+        </div>
+        </div>
+        </body>
+</html>
+         
